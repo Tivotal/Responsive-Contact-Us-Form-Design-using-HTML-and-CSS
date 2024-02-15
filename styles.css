@@ -1,0 +1,187 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(115deg, #4070f4 10%, #ff0000 90%);
+}
+
+.wrapper {
+  width: 800px;
+  max-width: 800px;
+  background: #fff;
+  padding: 25px 40px 10px 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  background: -webkit-linear-gradient(
+    right,
+    #4070f4,
+    #ff0000,
+    #4070f4,
+    #ff0000
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wrapper form {
+  padding: 30px 0 0 0;
+}
+
+form .row {
+  display: flex;
+  margin: 32px 0;
+}
+
+.row .input-box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+}
+
+.row .input-box.textarea {
+  height: 70px;
+}
+
+.input-box input,
+.input-box textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+.input-box textarea {
+  resize: none;
+  padding-top: 10px;
+}
+
+.input-box input:focus ~ label,
+.input-box textarea:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #4070f4;
+}
+
+.input-box label {
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.textarea label {
+  width: 100%;
+  bottom: 40px;
+  background: #fff;
+}
+
+.input-box .line {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+}
+
+.input-box .line:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #4070f4;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.input-box input:focus ~ .line:before,
+.input-box input:valid ~ .line:before,
+.textarea textarea:focus ~ .line:before,
+.textarea textarea:valid ~ .line:before {
+  transform: scaleX(1);
+}
+
+.btn .input-box {
+  height: 45px;
+  width: 25%;
+  overflow: hidden;
+}
+
+.input-box .layer {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(
+    right,
+    #4070f4,
+    #ff0000,
+    #4070f4,
+    #ff0000
+  );
+  transition: all 0.4s;
+}
+
+.btn .input-box:hover .layer {
+  left: 0;
+}
+
+.btn .input-box input {
+  position: relative;
+  z-index: 2;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .wrapper .text {
+    font-size: 30px;
+  }
+
+  .wrapper form {
+    padding: 10px 0 0 0;
+  }
+
+  .wrapper form .row {
+    display: block;
+  }
+
+  form .row .input-box {
+    margin: 35px 0;
+  }
+
+  .btn .input-box {
+    width: 40%;
+  }
+}
