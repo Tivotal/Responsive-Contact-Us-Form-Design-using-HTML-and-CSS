@@ -78,15 +78,6 @@ form .row {
   padding-top: 10px;
 }
 
-.input-box input:focus ~ label,
-.input-box textarea:focus ~ label,
-.input-box input:valid ~ label,
-.input-box textarea:valid ~ label {
-  transform: translateY(-20px);
-  font-size: 14px;
-  color: #4070f4;
-}
-
 .input-box label {
   position: absolute;
   pointer-events: none;
@@ -99,6 +90,15 @@ form .row {
   width: 100%;
   bottom: 40px;
   background: #fff;
+}
+
+.input-box input:focus ~ label,
+.input-box textarea:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #4070f4;
 }
 
 .input-box .line {
